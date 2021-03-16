@@ -25,6 +25,7 @@ p{
     justify-content: center;
     align-items: center;
     background: url(bg.png);
+    background-attachment: fixed;
     background-size: cover;
 
 }
@@ -37,6 +38,17 @@ p{
     color: #fff;
     z-index: 1000;
     transition: 0.5s;
+    animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 .banner .content p{
     color: #fff;
@@ -89,6 +101,7 @@ header.sticky .logo{
     color: #111;
 }
 header span{
+    display: inline;
     color: #ff0157;
 }
 
@@ -144,6 +157,17 @@ section{
     color: #ff0157;
     font-size: 2em;
     font-weight: 1000;
+    animation: animate 1s forwards;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        /* transform: translateY(-50px); */
+    }
+    100%{
+        opacity: 1;
+        /* transform: translateY(0); */
+    }
 }
 
 .row .col50 .imgBox{
@@ -188,6 +212,7 @@ section{
     position: relative;
     width: 100%;
     height: 300px;
+    animation: fadeIn 1s linear;
 }
 
 .menu .content .box .imgBox img {
@@ -236,6 +261,7 @@ section{
 .testimonials{
     background: url(bg2.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 .white .titleText,
 .white p {
